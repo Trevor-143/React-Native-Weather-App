@@ -28,7 +28,8 @@ const City = () => {
 const Styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: StatusBar.currentHeight || 0,
+        marginTop: 0
+        // marginTop: StatusBar.currentHeight || 0,
     },
     imageLayout: {
         flex: 1,
@@ -53,7 +54,7 @@ const Styles = StyleSheet.create({
         backgroundColor: '#00008B',
         margin: 40,
         padding: 30,
-        borderRadius: 10,
+        borderRadius: 30,
     },
     populationText: {
         fontSize: 40,
@@ -61,7 +62,10 @@ const Styles = StyleSheet.create({
     },
     riseset: {
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
+        flexDirection: "row",
+        paddingHorizontal: 80,
+        paddingVertical: 10
     },
     
 })

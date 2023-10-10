@@ -14,40 +14,44 @@ export default function Tabs () {
             tabBarActiveTintColor: '#00008B',
             tabBarInactiveTintColor: 'grey',
             tabBarStyle: {
-                backgroundColor: 'lightblue'
+                backgroundColor: '#fff',
+                paddingBottom: 15,
+                height: 70,
+                margin: 10,
+                borderRadius: 20
             },
             headerStyle: {
-                backgroundColor: 'lightblue'
+                backgroundColor: '#fff',
             },
             headerTitleStyle: {
-                fontSize: 30,
+                fontSize: 20,
                 color: '#00008B'
             }
             
           }} >
     
               <Tab.Screen 
-                name={'Current'} 
+                name={'Current weather'} 
                 component={CurrentWeather} 
                 options={{
                   tabBarIcon: ({ focused }) => ( 
                     <Feather 
                       name="droplet" 
                       size={ focused ? 30 : 17} 
-                      color={ focused ? '#00008B' : 'grey' } 
+                      color={ focused ? '#00008B' : 'grey' }
                     /> 
                   )
                 }} 
               />
               <Tab.Screen 
-                name={'Upcoming'} 
+                name={'Upcoming weather'} 
                 component={UpcomingWeather} 
                 options={{
                   tabBarIcon: ({ focused }) => ( <Feather name="clock" size={ focused ? 30 : 17} color={ focused ? '#00008B' : 'grey' } /> )
                 }}
               />
               <Tab.Screen 
-                name={'City'} 
+                name={'City weather'}
                 component={City} 
                 options={{ 
                   tabBarIcon: ({ focused }) => ( <Feather name="home" size={ focused ? 30 : 17} color={ focused ? '#00008B' : 'grey' } /> )
