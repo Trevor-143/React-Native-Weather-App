@@ -12,6 +12,7 @@ export default function CurrentWeather () {
     descWrapper 
   } = Styles
   
+  
   return (
     <SafeAreaView style={wrapper} >
       <View style={ container } >

@@ -11,6 +11,7 @@ import {
 import { FontAwesome } from '@expo/vector-icons';
 import ListItem from '../components/ListItem';
 
+
 const DATA = [
     {
         dt_txt: "2023-02-18 12:00:00",
