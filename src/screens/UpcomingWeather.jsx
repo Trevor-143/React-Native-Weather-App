@@ -8,7 +8,7 @@ import {
     StatusBar, 
     ImageBackground 
 } from 'react-native'
-import { FontAwesome } from '@expo/vector-icons';
+
 import ListItem from '../components/ListItem';
 
 

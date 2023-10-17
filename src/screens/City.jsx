@@ -4,19 +4,31 @@ import { Ionicons } from '@expo/vector-icons';
 import IconText from "../components/IconText";
 
 const City = () => {
+
+    const { 
+        container, 
+        imageLayout, 
+        city, 
+        cityText, 
+        populationWrapper, 
+        populationText, 
+        riseset,
+        countryName
+    } = Styles
+
     return (
-        <SafeAreaView style={Styles.container} >
+        <SafeAreaView style={container} >
             <ImageBackground
                 source={require('../../assets/city.jpg')}
-                style={Styles.imageLayout}
+                style={imageLayout}
             >
-                <Text style={[Styles.city, Styles.cityText]} >London</Text>
-                <Text style={[Styles.countryName, Styles.cityText]} >United Kingdom</Text>
-                <View style={Styles.populationWrapper} >
+                <Text style={[city, cityText]} >London</Text>
+                <Text style={[countryName, cityText]} >United Kingdom</Text>
+                <View style={populationWrapper} >
                     <Ionicons name="people" size={24} color="white" />
-                    <Text style={Styles.populationText} >8,000</Text>
+                    <Text style={populationText} >8,000</Text>
                 </View>
-                <View style={Styles.riseset} >
+                <View style={riseset} >
                     <IconText iconName={'sunrise'} iconSize={60} iconColor={'white'} timeText={'10:33:50'} />
                     <IconText iconName={'sunset'} iconSize={60} iconColor={'white'} timeText={'16:33:50'} />
                 </View>

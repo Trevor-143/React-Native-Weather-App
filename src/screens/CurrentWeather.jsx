@@ -1,6 +1,7 @@
 import react from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import { FontAwesome } from '@expo/vector-icons';
+import RowText from "../components/RowText";
 
 export default function CurrentWeather () {
   const { 
@@ -19,15 +20,29 @@ export default function CurrentWeather () {
         <FontAwesome name="sun-o" size={100} color="black" />
         <Text style={temp} >6</Text>
         <Text style={feels} >Feels like 6</Text>
-        <View style={highLow} >
+        <RowText 
+        messageOne={'High: 8'} 
+        messageTwo={'Low: 6'} 
+        containerStyles={highLow} 
+        messageOneStyles={highLow}
+        messageTwoStyles={highLow}
+        />
+        {/* <View style={highLow} >
           <Text>High: 8</Text>
           <Text>Low: 5</Text>
-        </View>
+        </View> */}
       </View>
-      <View style={descWrapper} >
+      <RowText 
+        messageOne={'Its sunny'} 
+        messageTwo={'Perfect T-Shirt weather.'} 
+        containerStyles={descWrapper} 
+        messageOneStyles={highLow}
+        messageTwoStyles={highLow}
+      />
+      {/* <View style={descWrapper} >
         <Text>Its Sunny</Text>
         <Text>Its perfect T-shirt weather</Text>
-      </View>
+      </View> */}
     </SafeAreaView>
   )
 }

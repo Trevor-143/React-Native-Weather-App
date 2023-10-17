@@ -4,10 +4,11 @@ import { Feather } from '@expo/vector-icons';
 
 const IconText = (props) => {
     const { iconName, iconSize, iconColor, timeText } = props
+    const { riseset, risesetText } = Styles
     return (
-        <View style={Styles.riseset} >
+        <View style={riseset} >
             <Feather name={iconName} size={iconSize} color={iconColor} />
-            <Text style={Styles.risesetText} >{timeText}</Text>
+            <Text style={risesetText} >{timeText}</Text>
             {/* <Feather name="sunrise" size={60} color="white" /> */}
             {/* <Text style={Styles.risesetText} >10:33:50</Text> */}
             {/* <Feather name="sunset" size={60} color="white" /> */}
