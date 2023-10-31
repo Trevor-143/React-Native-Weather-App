@@ -28,10 +28,6 @@ export default function CurrentWeather () {
         messageOneStyles={highLow}
         messageTwoStyles={highLow}
         />
-        {/* <View style={highLow} >
-          <Text>High: 8</Text>
-          <Text>Low: 5</Text>
-        </View> */}
       </View>
       <RowText 
         messageOne={'Its sunny'} 
@@ -40,10 +36,6 @@ export default function CurrentWeather () {
         messageOneStyles={highLow}
         messageTwoStyles={highLow}
       />
-      {/* <View style={descWrapper} >
-        <Text>Its Sunny</Text>
-        <Text>Its perfect T-shirt weather</Text>
-      </View> */}
     </SafeAreaView>
   )
 }
