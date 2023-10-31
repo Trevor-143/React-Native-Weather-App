@@ -25,7 +25,12 @@ export default function Tabs() {
         },
         headerTitleStyle: {
           fontSize: 20,
-          color: "#00008B"
+          fontWeight: 'bold',
+          color: "#00008B",
+          alignSelf: 'center',
+          // backgroundColor: '#000',
+          marginHorizontal: 'auto',
+          textAlign: 'center',
         }
       }}
     >
