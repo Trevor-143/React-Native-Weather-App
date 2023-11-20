@@ -4,22 +4,25 @@ import { FontAwesome } from '@expo/vector-icons';
 import RowText from "../components/RowText";
 import { weatherType } from "../utilities/weatherType";
 
-export default function CurrentWeather () {
+export default function CurrentWeather ({ weatherData }) {
   const { 
     wrapper,
     container,
-    temp,
+    tempStyles,
     feels,
     highLow,
     descWrapper 
   } = Styles
   
+  // console.log(weatherData)
+  const { main: { temp, feels_like, temp_max, temp_min }, weather } = weatherData
+  const weatherCondition = weather[0].main
   
   return (
-    <SafeAreaView style={wrapper} >
+    <SafeAreaView style={[wrapper, {backgroundColor: weatherType[weatherCondition].backgroundColor} ]} >
       <View style={ container } >
         <FontAwesome name="sun-o" size={100} color="black" />
-        <Text style={temp} >6</Text>
+        <Text style={tempStyles} >6</Text>
         <Text style={feels} >Feels like 6</Text>
         <RowText 
         messageOne={'High: 8'} 
@@ -52,7 +55,7 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  temp: {
+  tempStyles: {
     color: 'black',
     fontSize: 70,
   },

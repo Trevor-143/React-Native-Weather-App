@@ -4,10 +4,14 @@ import UpcomingWeather from "../screens/UpcomingWeather"
 import City from "../screens/City"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { Feather } from "@expo/vector-icons"
+import { useGetWeather } from "../hooks/useGetWeather";
 
 const Tab = createBottomTabNavigator()
 
+
 export default function Tabs() {
+  
+  const [ loading, error, weather ] = useGetWeather()
   return (
     <Tab.Navigator
       screenOptions={{
@@ -36,7 +40,6 @@ export default function Tabs() {
     >
       <Tab.Screen
         name={"Current weather"}
-        component={CurrentWeather}
         options={{
           tabBarIcon: ({ focused }) => (
             <Feather
@@ -46,7 +49,9 @@ export default function Tabs() {
             />
           )
         }}
-      />
+      >
+        {() => <CurrentWeather weatherData={weather.list[0]} />}
+      </Tab.Screen>
       <Tab.Screen
         name={"Upcoming weather"}
         component={UpcomingWeather}
